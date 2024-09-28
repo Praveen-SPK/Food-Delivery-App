@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+	scroll-behavior:smooth;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;  
+    background: url(../Images/img8.png);
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.wrapper{
+    width: 33%;
+    overflow: hidden;
+    height: 75vh;
+    position: relative;
+    transition: 0.5s ease-in-out; 
+    border: 1px solid rgb(10, 9, 9); 
+    backdrop-filter: blur(6px);
+    border-radius: 15px;
+    
+}
+.form-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    height: 75vh;
+    transition: 0.4s ease-in-out;
+}
+
+
+h3{
+    text-align: center;
+    font-weight: 500;
+    padding-top: 15px;
+    font-size: xx-large;
+}
+.form-input{
+    width: 100%;
+    color: rgb(5, 5, 5);
+    margin-top:33px; 
+    border-bottom: 1.5px solid rgb(2, 2, 2) ;
+    position: relative;
+    
+}
+
+.form-input label{
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    padding: 5px;
+    transition: .5s;
+    pointer-events: none;
+}
+.form-input input{
+    border: none;
+    padding: 5px;
+    width: 100%;
+    background-color: transparent;
+}
+.form-input input:focus~label,
+.form-input input:valid~label {
+  bottom: 25px;
+  
+}
+.form-input input:focus,
+.form-input input:valid {
+ outline: none;
+ 
+}
+.form-input input:active{
+    border: none;
+    padding: 5px;
+    width: 100%;
+}
+.remember-me{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 14px;
+    
+}
+.remember-me a{
+    margin-left: 20px;
+    border: none;
+    background-color: transparent;
+    font-size: .8rem;
+    text-decoration: 1px underline white;
+    color: rgb(252, 247, 247);
+}
+a:hover{
+    color: rgb(7, 7, 7);
+    text-decoration: none;
+    
+    
+}
+.checkbox{
+    accent-color: rgb(11, 11, 11); 
+    
+}
+.btn{
+   display: flex;
+   justify-content: center;
+   width: 100%;
+}
+.btn button{
+    width: 100%;
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: 1px solid rgb(249, 246, 246);
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: transparent;
+    
+}
+.btn button:active{
+    transform: scale(0.9);
+    background-color: rgb(15, 15, 15);
+}
+
+.form-changer{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    
+    
+}
+.form-changer a {
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    font-size: .9rem;
+    color: rgb(254, 253, 253);
+    text-decoration: none;
+    
+}
+.form-changer a:active{
+    transform: scale(0.8);
+    color: rgb(4, 4, 4);
+}
+
+.forget-submit a{
+	text-decoration: none;
+	color:black;
+	
+}
+
+
+/* FORM CHANGE CODE'S BELOW HERE */
+.wrapper .form-wrapper.forget-password{
+    position: absolute;
+    top: 0;
+    left: 1000px;
+}
+.wrapper .form-wrapper.signup{
+    position: absolute;
+    top: 1000px;
+    left: 0;
+}
+
+.wrapper .form-wrapper.change-password{
+    position: absolute;
+    top: 1000px;
+    left: 1000px;
+}
+.wrapper.signup .form-wrapper{
+    transform: translateY(-1000px);
+}
+.wrapper.signin .form-wrapper{
+    transform: translateY(0px);
+}
+.wrapper.forget .form-wrapper{
+    transform: translatex(-1000px);
+}
+.wrapper.change .form-wrapper{
+    transform: translate(-1000px,-1000px);
+    
+}
+.wrapper.fromforget .form-wrapper{
+    transform: translate(0,-1000px);
+    
+}
+
+.wrapper.fromchange .form-wrapper{
+    transform: translate(0,-1000px);
+    
+}
